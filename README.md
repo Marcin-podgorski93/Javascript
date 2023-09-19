@@ -50,3 +50,13 @@ checkDriverAge2();
 //BONUS: Instead of using the prompt. Now, only use console.log and make the checkDriverAge() function accept an argument of age, so that if you enter:
 checkDriverAge(92);
 it returns "Powering On. Enjoy the ride!"
+
+function checkDriverAge(age) {
+	if (Number(age) < 18) {
+		alert("Sorry, you are too yound to drive this car. Powering off");
+	} else if (Number(age) > 18) {
+		alert("Powering On. Enjoy the ride!");
+	} else if (Number(age) === 18) {
+		alert("Congratulations on your first year of driving. Enjoy the ride!");
+	}
+}
