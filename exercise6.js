@@ -13,3 +13,13 @@ object1.a = 4;
 
 //#3 create two classes: an Animal class and a Mamal class. 
 // create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
+
+
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+function solution(str){
+    return str.split('').reverse().join('');
+  }
