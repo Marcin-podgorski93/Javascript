@@ -14,6 +14,11 @@ object1.a = 4;
 //#3 create two classes: an Animal class and a Mamal class. 
 // create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 
+class Animal
+
+
+class Mamal 
+
 
 // Complete the solution so that it reverses the string passed into it.
 
