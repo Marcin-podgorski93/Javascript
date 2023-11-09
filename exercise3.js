@@ -1,30 +1,32 @@
 // change everything below to the newer Javascript!
 
 // let + const
-// var a = 'test';
-// var b = true;
-// var c = 789;
-// a = 'test2';
+var a = 'test';
+var b = true;
+var c = 789;
+a = 'test2';
 
-//  new 
+// newer JAvascript
 let a = 'test';
 const b = true;
-const c = 789;    
+const c = 789;
+a = 'test2';
+
 
 // Destructuring
-// var person = {
-//     firstName : "John",
-//     lastName  : "Doe",
-//     age       : 50,
-//     eyeColor  : "blue"
-// };
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue"
+};
 
-// var firstName = person.firstName;
-// var lastName = person.lastName;
-// var age = person.age;
-// var eyeColor = person.eyeColor;
+var firstName = person.firstName;
+var lastName = person.lastName;
+var age = person.age;
+var eyeColor = person.eyeColor;
 
-// new Javascript
+// newer Javascript
 const person = {
     firstName : "John",
     lastName  : "Doe",
@@ -32,48 +34,46 @@ const person = {
     eyeColor  : "blue"
 };
 
-const { firstName, lastName, age, eyeColor} = person;
-
+const { firstName, lastName, age, eyeColor } = person;
 
 // Object properties
-// var a = 'test';
-// var b = true;
-// var c = 789;
+var a = 'test';
+var b = true;
+var c = 789;
 
-// var okObj = {
-//   a: a,
-//   b: b,
-//   c: c
-// };
-// new Javascript
+var okObj = {
+  a: a,
+  b: b,
+  c: c
+};
 
+//newer JavaScript
 const a = 'test';
 const b = true;
 const c = 789;
 
-const okObj = {a, b, c};
-  
+const okObj = { a, b, c }; 
 
 // Template strings
-// var message = "Hello " + firstName + " have I met you before? I think we met in " + city + " last summer no???";
+var message = "Hello " + firstName + " have I met you before? I think we met in " + city + " last summer no???";
 
-// new Javascript
-
-const messasge = `Hello ${firstName} have I met you before? I think we met in  ${city} last summer no???`;
-
+//newer JavaScript
+const message = `Hello ${firstName} have I met you before? I think we met in ${city} last summer no???`;
 
 // default arguments
 // default age to 10;
 function isValidAge(age) {
-    return age;
+    return age
 }
-// new
+
+// newes JavaScript
+
 const isValidAge = (age = 10) => age;
 
 
 // Symbol
 // Create a symbol: "This is my first Symbol"
-const sym = Symbol('My first symbol');
+const sym = Symbol("This is my first symbol");
 
 
 // Arrow functions
@@ -85,7 +85,7 @@ function whereAmI(username, location) {
     }
 }
 
-// new Javascript
+// newer JavaScript
 
 const whereAmI = (username, location) => {
     if (username && location) {
@@ -93,4 +93,4 @@ const whereAmI = (username, location) => {
     } else {
         return "I am totally lost!";
     }
-};
+}
