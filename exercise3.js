@@ -66,7 +66,7 @@ function isValidAge(age) {
     return age
 }
 
-// newes JavaScript
+// newer JavaScript
 
 const isValidAge = (age = 10) => age;
 
