@@ -49,6 +49,8 @@ const filterArray = array.filter(user => {
 })
 console.log(filterArray);
 
+
+
 //Find out the total score of all users using reduce
 const total = array.reduce((acc, user) => {
 	return acc + user.score
