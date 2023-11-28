@@ -1,5 +1,5 @@
 // Complete the below questions using this array:
-const array = [
+`const array = [
   {
     username: "john",
     team: "red",
@@ -25,7 +25,7 @@ const array = [
     items: ["book", "pen"]
   },
 
-];
+];`
 
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 
@@ -85,7 +85,7 @@ console.log(filterArray);
 
 
 
-const filterArray = array.filter(user => console.log(user.team)); // pokazanie samcyh danych z team 
+const filterArray = array.filter(user => console.log(user.team)); // pokazanie samych danych z team 
 
 
 //Find out the total score of all users using reduce
