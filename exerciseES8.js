@@ -28,9 +28,9 @@ console.log(rabbit);
 
 // #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
 // Read about what the second parameter does in padEnd and padStart
-turtle = turtle.trim().padEnd(9, '=');
-
+turtle = turtle.trim().padEnd(9, '='); 
 '🐢========'
+'       🐇'
 
 // #3) Get the below object to go from:
 let obj = {
@@ -50,6 +50,6 @@ let obj = {
 
 Object.entries(obj).map(value => (value[0] + " " + value[1])).join(' ');
 
-// or
+//or
 
 Object.entries(obj).map(value => value.join(" ")).join(' ');
