@@ -100,14 +100,19 @@ biggestNumberInArray3(array);
 
 // Question #2:
 // Write a function checkBasket() that lets you know if the item is in the basket or not
-amazonBasket = {
+const amazonBasket = {
   glasses: 1,
   books: 2,
   floss: 100
 }
 
 function checkBasket(basket, lookingFor) {
-
+  for (item in basket) {
+    if (item === lookingFor) {
+      return `Przedmiot ${item} znajduje sie w koszyku w ilosci ${basket[item]}`;
+    }
+  }
+  return `Przedmiot nie znajduje sie w koszyku`;
 }
 
-
+checkBasket(amazonBasket, 'glasses')
