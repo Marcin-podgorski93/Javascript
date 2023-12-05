@@ -29,25 +29,6 @@ for (item of basket) {
 // biggestNumberInArray([-1,0,3,100, 99, 2, 99]) should return 100;
 // Use at least 3 different types of javascript loops to write this:
 const array = [-1,0,3,100, 99, 2, 99] // should return 100
-
-let maxArray = array[0];
-
-for (let i=0; i< array.length; i++) {
-  if (array[i] > maxArray) {
-  maxArray = array[i];
-  }
-}
-console.log("Największa liczba:", maxArray);
-
-// forEach
-
-const array = [-1,0,3,100, 99, 2, 99]
-
-array.forEach(num => console.log(num));
-// ************************************
-
-
-const array = [-1,0,3,100, 99, 2, 99] // should return 100
 const array2 = ['a', 3, 4, 2] // should return 4
 const array3 = [] // should return 0
 
@@ -116,3 +97,5 @@ function checkBasket(basket, lookingFor) {
 }
 
 checkBasket(amazonBasket, 'glasses')
+
+
