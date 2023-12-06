@@ -57,3 +57,20 @@ console.log(null ?? 'hellooo') // 'hellooo'
 console.log(null || 'hellooo') // 'hellooo'
 console.log((false || null) ?? 'hellooo') // 'hellooo'
 console.log(null ?? (false || 'hellooo')) // 'hellooo'
+
+const ztmMonsters = [
+    {id: 1, monster: 'Mr.Mouse', level: 1},
+    {id: 2, monster: 'Mac', level: 30},
+    {id: 3, monster: 'Denodude', level: 17},
+    {id: 4, monster: 'Pye', level: 5},
+];
+
+const filterMonster = ztmMonsters.filter(item => item.level > 15); //wyswietlenie tylko tablic ktore 
+//maja wyzszy lvl niz 15 
+console.log(filterMonster);
+
+console.log(filterMonster[filterMonster.length -1]); // wyswietli tylko ostatnia wartosc 
+// lub
+console.log(filterMonster.at(-1)); //uzycie ES2022
+
+const ztmMonstersList = ['Mr. Mouse', 'Mac', 'Denodude', 'Pye'];
