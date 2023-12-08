@@ -45,6 +45,20 @@ function biggestNumberInArray(arr) {
   return maxArr
 }
 
+const array = [-1,0,3,100, 99, 2, 99]
+
+function biggestNumberInArray(arr) {
+  let maxArr = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > maxArr) {
+      maxArr = arr[i];
+    }
+    
+  }
+  return `Najwieksza liczba to ${maxArr}`;
+}
+
+
 biggestNumberInArray(array);
 
 // forEach
@@ -61,6 +75,20 @@ function biggestNumberInArray2(arr) {
     });
         return maxArr; // lub uzyc console.log(maxArr)
   }
+  biggestNumberInArray2(array);
+
+  const array = [-1,0,3,100, 99, 2, 99]
+
+  function biggestNumberInArray2(arr) {
+    let maxArr = arr[0];
+    arr.forEach(num => {
+      if (num > maxArr) {
+        maxArr = num;
+      }
+    });
+    return `Najwieksza liczba to ${maxArr}`;
+  }
+
   biggestNumberInArray2(array);
 
 // for of 
@@ -97,5 +125,7 @@ function checkBasket(basket, lookingFor) {
 }
 
 checkBasket(amazonBasket, 'glasses')
+
+checkBasket(detailedBasket, 'oranges')
 
 
