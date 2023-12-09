@@ -61,6 +61,21 @@ function biggestNumberInArray(arr) {
 
 biggestNumberInArray(array);
 
+// or
+
+const biggestNumberInArray = (arr) => {
+  let maxArr = arr[0];
+  arr.forEach(num => {
+      if (num > maxArr) {
+          maxArr = num;
+      }
+  });
+  return `Największa liczba to ${maxArr}`;
+};
+
+const array = [-1, 0, 3, 100, 99, 2, 99];
+console.log(biggestNumberInArray(array));
+
 // forEach
 
 const array = [-1,0,3,100, 99, 2, 99]
