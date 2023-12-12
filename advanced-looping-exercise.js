@@ -151,3 +151,44 @@ setTimeout(() => {
   console.log('2');
 }, 0);
 console.log('3');
+
+Clean the room function: given an input of 
+[1,2,4,591,392,391,2,5,10,2,1,1,1,20,20], make a function 
+that organizes these into individual array that is ordered.
+For example answer(ArrayFromAbove) should return: [[1,1,1,1],[2,2,2], 4,5,10,[20,20], 391, 392,591]
+
+const array = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
+
+array4.forEach(item => console.log(item)); 
+
+
+
+
+const array4 = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
+
+
+
+const array = [1, 1, 2, 2, 3]; 
+
+// najprosciej uzyc forEach oraz push 
+
+
+
+function ArrayFromAbove(arr) {
+  resultArray = []; // tablica gdzie beda zbierane dane
+  let currentNum = arr[0];
+  let currentArray = [currentNum];
+
+  arr.slice(1).forEach(num => {
+    if (num === currentNum) {
+      currentArray.push(num);
+    } else {
+      resultArray.push(currentArray);
+      currentNum = num;
+      currentArray = [num];
+    }
+  });
+  return(resultArray)
+}
+
+ArrayFromAbove(array4);
