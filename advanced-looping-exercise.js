@@ -168,15 +168,17 @@ const array4 = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
 
 
-const array = [1, 1, 2, 2, 3]; 
+// const array = [1, 1, 2, 2, 3]; 
 
 // najprosciej uzyc forEach oraz push 
 
 
 
 function ArrayFromAbove(arr) {
+
+  const sortedArray = arr.sort((a, b) => a - b);
   resultArray = []; // tablica gdzie beda zbierane dane
-  let currentNum = arr[0];
+  let currentNum = sortedArray[0];
   let currentArray = [currentNum];
 
   arr.slice(1).forEach(num => {
