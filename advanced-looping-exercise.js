@@ -166,14 +166,6 @@ array4.forEach(item => console.log(item));
 
 const array4 = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 
-
-
-// const array = [1, 1, 2, 2, 3]; 
-
-// najprosciej uzyc forEach oraz push 
-
-
-
 function ArrayFromAbove(arr) {
 
   const sortedArray = arr.sort((a, b) => a - b);
@@ -181,7 +173,7 @@ function ArrayFromAbove(arr) {
   let currentNum = sortedArray[0];
   let currentArray = [currentNum];
 
-  arr.slice(1).forEach(num => {
+  sortedArray.slice(1).forEach(num => {
     if (num === currentNum) {
       currentArray.push(num);
     } else {
@@ -190,6 +182,10 @@ function ArrayFromAbove(arr) {
       currentArray = [num];
     }
   });
+
+  // Dodaj ostatnią grupę, która może zostać pominięta w pętli
+  resultArray.push(currentArray);
+
   return(resultArray)
 }
 
