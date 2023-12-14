@@ -108,30 +108,6 @@ function findNeedle(arr) {
 // console.log(findNeedle(array));
 
 
-function findNeedle1(arr, searchValue) {
-    const resultArray = arr.map((value, i) => {
-        console.log(value, i);
-    if (value === searchValue) {
-        console.log(`found the ${searchValue} at position ${i}`);
-    }
-        return value;
-});
-
-    return resultArray;
-}
-
-// console.log(findNeedle1(array, "junk"));
-
-function findNeedle2(arr) {
-    arr.forEach((value, i) => {
-        console.log(value,i);
-        if (value === "needle") {
-            console.log(`found the needle at position ${i}`)
-        }
-    });
-}
-
-console.log(findNeedle2(array));
 
 
 
@@ -171,9 +147,8 @@ function findNeedle(array) {
     });
   
     return result;
-  }
+  };
   
-  const array = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
   console.log(findNeedle(array));
 
 // the best 
