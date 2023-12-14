@@ -183,7 +183,7 @@ function ArrayFromAbove(arr) {
     }
   });
 
-  // Dodaj ostatnią grupę, która może zostać pominięta w pętli
+  
   resultArray.push(currentArray);
 
   return(resultArray)
