@@ -87,5 +87,100 @@ function greet1(name) {
     }
 }
 
-console.log(greet1("Marcin"));
-console.log(greet1());
+// console.log(greet1("Marcin"));
+// console.log(greet1());
+
+
+const array = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+
+function findNeedle(arr) {
+    const resultArray = arr.map((value, i) => {
+        console.log(value, i);
+    if (value === "needle") {
+        console.log(`found the needle at position ${i}`)
+    }
+        return value;
+});
+
+    return resultArray;
+}
+
+// console.log(findNeedle(array));
+
+
+function findNeedle1(arr, searchValue) {
+    const resultArray = arr.map((value, i) => {
+        console.log(value, i);
+    if (value === searchValue) {
+        console.log(`found the ${searchValue} at position ${i}`);
+    }
+        return value;
+});
+
+    return resultArray;
+}
+
+// console.log(findNeedle1(array, "junk"));
+
+function findNeedle2(arr) {
+    arr.forEach((value, i) => {
+        console.log(value,i);
+        if (value === "needle") {
+            console.log(`found the needle at position ${i}`)
+        }
+    });
+}
+
+console.log(findNeedle2(array));
+
+
+
+const resultArray = array.indexOf('needle');
+console.log(resultArray);
+
+
+function findNeedle5(arr) {
+    const resultArray = arr.indexOf('needle');
+
+    if (resultArray !== -1) {
+        return `found the needle at position ${resultArray}`;
+    } else {
+        `not found`
+    }
+}
+
+console.log(findNeedle5(array));
+
+
+// or 
+
+function findNeedle(haystack) {
+    return "found the needle at position " + haystack.indexOf("needle");
+  }
+
+
+//
+
+function findNeedle(array) {
+    // let result = 'not found'; mozna dac ale nie trzeba 
+  
+    array.forEach((element, index) => {
+      if (element === 'needle') {
+        result = `found the needle at position ${index}`;
+      }
+    });
+  
+    return result;
+  }
+  
+  const array = ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"];
+  console.log(findNeedle(array));
+
+// the best 
+
+function findNeedle3(arr) {
+    return arr.includes('needle') ? `found the needle at position ${arr.indexOf('needle')}` : 'not found';
+  }
+  
+  console.log(findNeedle3(array));
+
