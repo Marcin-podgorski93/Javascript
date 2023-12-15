@@ -225,3 +225,5 @@ function newArray(arr) {
 
 console.log(newArray(arrayToremove));
 
+
+
