@@ -159,3 +159,69 @@ function findNeedle3(arr) {
   
   console.log(findNeedle3(array));
 
+//
+
+function findNeedle6(arr) {
+    arr.forEach((element, index) => {
+        if (element === 'needle') {
+            result = `found the needle at position ${index}`
+        }
+    });
+
+    return result;
+}
+
+console.log(findNeedle6(array));
+
+// Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending on language) which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// employed | vacation 
+// true     | true     => false
+// true     | false    => true
+// false    | true     => false
+// false    | false    => false
+
+function setAlarm(employed , vacation) {
+    if (employed && !vacation) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(setAlarm(true, false));
+
+//or
+
+function setAlarm2(employed, vacation) {
+    return (employed && !vacation) ? true : false;
+}
+
+console.log(setAlarm2(true,false));
+
+// or 
+
+function setAlarm1(employed, vacation) {
+    return employed && !vacation;
+  }
+  
+
+//   Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+const arrayToremove = ["Keep", "Remove", "Keep", "Remove", "Keep", "Remove"];
+
+function newArray(arr) {
+    // mozna uzyc return arr.filter((_, index) => index % 2 === 0);
+    // gdzie "_" oznacza ze ta wartosc jest ignorowana ale mzona napisac cokolwiek
+    return arr.filter((element, index) => index % 2 === 0);
+}
+
+console.log(newArray(arrayToremove));
+
