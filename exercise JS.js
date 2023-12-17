@@ -234,3 +234,9 @@ function multiply(times, string) {
 }
 
 console.log(multiply(5, "Marcin"));
+
+// or
+
+const multiply1 = (string, times) => string.repeat(times);
+
+console.log(multiply1("Marcin", 5));
