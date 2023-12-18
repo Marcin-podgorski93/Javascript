@@ -268,8 +268,47 @@ function abbrevName(name){
     // return nameArray; //wynik ["Marian","Nowak"]
   }
 
+//or
+
+const abbrevName1 = (name) => {
+    return name.split(" ").map(name => name[0].toUpperCase()).join(".");
+  }
+
+
+console.log(abbrevName1("Michal wisniewski"))
+
 console.log(abbrevName("Marian Nowak"));
 
 console.log(firstLetter("marcin nowak"));
 
 console.log(firstLetter1("Marcin Nowak"));
+
+
+
+
+
+const mul5 = 10;
+
+const power2 = mul5.length;
+
+console.log(power2);
+
+const string = mul5.toString();
+
+console.log(string);
+
+const power = string.length;
+
+console.log(power);
+
+const multiplyby5 = Math.pow(5, power);
+
+console.log(multiplyby5);
+
+
+function multiplyBy5(num) {
+    
+}
+
+console.log(multiplyBy5(10));
+
