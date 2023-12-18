@@ -240,3 +240,36 @@ console.log(multiply(5, "Marcin"));
 const multiply1 = (string, times) => string.repeat(times);
 
 console.log(multiply1("Marcin", 5));
+
+
+function firstLetter(name) {
+    const splite = name.toUpperCase().split(" ");
+    const first = splite[0].charAt(0);
+    const last = splite.length > 1 ? splite.slice(-1)[0][0] : "";
+    return `${first}.${last}`;
+}
+
+
+// or
+
+function firstLetter1(fullName) {
+    const splite = fullName.split(" ");
+    const first = splite[0][0];
+    const last = splite.length > 1 ? splite[splite.length - 1][0] : "";
+    return `${first}.${last}`;
+}
+
+// or (The best because is short)
+
+function abbrevName(name){
+
+    var nameArray = name.split(" ");
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+    // return nameArray; //wynik ["Marian","Nowak"]
+  }
+
+console.log(abbrevName("Marian Nowak"));
+
+console.log(firstLetter("marcin nowak"));
+
+console.log(firstLetter1("Marcin Nowak"));
