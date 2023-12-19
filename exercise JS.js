@@ -287,7 +287,7 @@ console.log(firstLetter1("Marcin Nowak"));
 
 
 
-const mul5 = 10;
+const mul5 = -10;
 
 const power2 = mul5.length;
 
@@ -297,7 +297,11 @@ const string = mul5.toString();
 
 console.log(string);
 
-const power = string.length;
+const stringnum = mul5 < 0 ? 1 : 0;
+
+console.log(stringnum);
+
+const power = string.length - stringnum;
 
 console.log(power);
 
@@ -307,8 +311,38 @@ console.log(multiplyby5);
 
 
 function multiplyBy5(num) {
-    
-}
+    const string = Math.abs(num).toString();
+    const multiply = Math.pow(5, string.length) * num;
+    return multiply;
+};
 
 console.log(multiplyBy5(10));
 
+console.log(multiplyBy5(10));
+
+console.log(multiplyBy5(-2));
+
+// or
+
+function multiplyByy5(num) {
+    const string = num.toString();
+    const startIndex = num < 0 ? 1 : 0; // Ustal indeks początkowy
+    const multiply = Math.pow(5, string.length - startIndex) * num;
+    return multiply;
+};
+
+//the shortest version 
+
+function multiply(number) {
+    return number * Math.pow(5, Math.abs(number).toString().length);
+  }
+
+
+
+  const object = {
+    name: {
+        'Sally'
+    }
+};
+
+  object.name
