@@ -335,14 +335,49 @@ function multiplyByy5(num) {
 
 function multiply(number) {
     return number * Math.pow(5, Math.abs(number).toString().length);
+  };
+
+// ***************
+
+const array7 = [5, 6, 7, "Marcin"];
+
+  function check(arr, x) {
+    return arr.includes(x);
   }
 
+console.log(check(array7, 5))
+
+// lub nie uzywajac funkcji mozna zapisac tak
+
+const check9 = (a,x) => a.includes(x);
 
 
-  const object = {
-    name: {
-        'Sally'
+// or
+
+function containsValue(arr, x) {
+    // Użyj pętli for do iteracji przez elementy tablicy i sprawdzenia, czy x znajduje się w tablicy
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === x) {
+            return true;
+        }
     }
-};
+    return false;
+}
 
-  object.name
+
+console.log(containsValue(array7, 6));
+
+// use forEach
+
+function containsValue(arr, x) {
+    // Użyj pętli forEach do iteracji przez elementy tablicy i sprawdzenia, czy x znajduje się w tablicy
+    let found = false;
+    
+    arr.forEach(element => {
+        if (element === x) {
+            found = true;
+        }
+    });
+
+    return found;
+}
