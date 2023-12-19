@@ -339,7 +339,7 @@ function multiply(number) {
 
 // ***************
 
-const array7 = [5, 6, 7, "Marcin"];
+const array7 = [5, 6, 7, 8];
 
   function check(arr, x) {
     return arr.includes(x);
@@ -381,3 +381,18 @@ function containsValue(arr, x) {
 
     return found;
 }
+
+
+
+const double = array7.map(num => num * 2);
+
+console.log(double);
+
+
+// funkcja 
+
+function dobleArr(arr9) {
+    return arr9.map(num => num * 2);
+}
+
+console.log(dobleArr(array7));
