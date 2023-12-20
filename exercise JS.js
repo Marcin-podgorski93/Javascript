@@ -396,3 +396,43 @@ function dobleArr(arr9) {
 }
 
 console.log(dobleArr(array7));
+
+
+// reverse number in javascript
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+
+
+const array10 = [1,2,3,4,5];
+
+
+function reverse(arr) {
+    const reversedArray = arr.map( num => {
+        return -num;
+    });
+        return reversedArray;
+}
+
+//or
+
+function reverse2(arr) {
+    const reversedArray = arr.map( num => -num);
+        return reversedArray;
+}
+
+console.log(reverse(array10));
+
+//or
+
+
+function reverse3(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = -arr[i];
+    }
+    return arr;
+}
+
+console.log(reverse(array10));
+
