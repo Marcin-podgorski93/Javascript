@@ -446,8 +446,13 @@ function solution1(text, look) {
     return text.includes(look);
 }
 
-console.log(solution1('cda', 'd'));
+console.log(solution1('abc', 'bc'));
 
-console.log(solution1('abc', 'b'));
+console.log(solution1('abc', 'd'));
+
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
 
 
