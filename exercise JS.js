@@ -442,6 +442,12 @@ console.log(reverse(array10));
 // argument(string) passed in ends with the 2nd argument (also a string).
 
 
-  function endsWith(str, suffix) {
-    return str.endsWith(suffix);
+function solution1(text, look) {
+    return text.includes(look);
 }
+
+console.log(solution1('cda', 'd'));
+
+console.log(solution1('abc', 'b'));
+
+
