@@ -455,4 +455,11 @@ console.log(solution1('abc', 'd'));
 // solution('abc', 'd') // returns false
 
 
+let num = 20;
+if (num % 3 === 0 || num % 5 === 0 ) {
+    console.log("Liczba jest podzielna przez 3 lub 5")
+} else {
+    console.log("Liczba nie jest podzielna przez 3 lub 5");
+}
+
 
