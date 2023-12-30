@@ -463,3 +463,16 @@ if (num % 3 === 0 || num % 5 === 0 ) {
 }
 
 
+
+function triangle(a,b,c) {
+    if (a + b > c && a + c > b && b + c > a) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(triangle(5,4,11));
+console.log(triangle(7,2,2));
+console.log(triangle(1,2,2));
+
