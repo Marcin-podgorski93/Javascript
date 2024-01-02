@@ -460,8 +460,9 @@ if (num % 3 === 0 || num % 5 === 0 ) {
     console.log("Liczba jest podzielna przez 3 lub 5")
 } else {
     console.log("Liczba nie jest podzielna przez 3 lub 5");
-}
 
+}
+// funkcja dzieki ktorej sprawdzamy czy z danych wartosci powstanie trojkat czy nie 
 
 
 function triangle(a,b,c) {
@@ -470,9 +471,28 @@ function triangle(a,b,c) {
     } else {
         return false;
     }
-}
+};
 
 console.log(triangle(5,4,11));
 console.log(triangle(7,2,2));
 console.log(triangle(1,2,2));
 
+
+// DESCRIPTION:
+// Complete the function that accepts a string parameter, 
+// and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+const words = "This is an example!";
+const name = words.split(' ').map( word => word.split('').reverse().join('')).join(' ');
+console.log(name); 
+
+
+function reverseWords(str) {
+    return str.split(' ').map( word => word.split('').reverse().join('')).join(' ');
+  }
+
+console.log(reverseWords("dwa trzy"));
