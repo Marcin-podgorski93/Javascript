@@ -486,9 +486,9 @@ console.log(triangle(1,2,2));
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
 
-const words = "This is an example!";
-const name = words.split(' ').map( word => word.split('').reverse().join('')).join(' ');
-console.log(name); 
+// const words = "This is an example!";
+// const name = words.split(' ').map( word => word.split('').reverse().join('')).join(' ');
+// console.log(name); 
 
 
 function reverseWords(str) {
@@ -496,3 +496,42 @@ function reverseWords(str) {
   }
 
 console.log(reverseWords("dwa trzy"));
+
+
+
+
+// DESCRIPTION:
+// Complete the function that accepts a string parameter, 
+// and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+const words = "This is an example!";
+
+const wordSpliced = words.split(' ')
+.map( word => word.split('')
+.reverse().join('')).join(' ');
+
+
+console.log(words);
+console.log(wordSpliced);
+
+
+
+// Sentence Smash
+// Write a function that takes an array of words and smashes
+// them together into a sentence and returns the sentence. 
+// You can ignore any need to sanitize words or add punctuation,
+//  but you should add spaces between each word. 
+// Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+
+const text = ['hello', 'world', 'this', 'is', 'great'];
+
+const textJoin = text.join(' ');
+
+console.log(text);
+console.log(textJoin);
+
