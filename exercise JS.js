@@ -557,23 +557,56 @@ console.log(identity(3));
 // Theres is no need to check for negative values or values greater than 100.
 
 
-function score(score1, score2, score3) {
-    const average = (score1 + score2 + score3) / 3;
+// function score(score1, score2, score3) {
+//     const average = (score1 + score2 + score3) / 3;
 
-    if (average >= 90 && average <= 100) {
-        return 'A'
-    } else if (average >= 80 && average <= 90) {
-        return 'B'
-    } else if (average >= 70 && average <= 80) {
-        return 'C'
-    } else if (average >= 60 && average <= 70) {
-        return 'D'
-    } else if (average >= 0 && average <= 60) {
-        return 'F'
-    } 
+//     if (average >= 90 && average <= 100) {
+//         return 'A'
+//     } else if (average >= 80 && average <= 90) {
+//         return 'B'
+//     } else if (average >= 70 && average <= 80) {
+//         return 'C'
+//     } else if (average >= 60 && average <= 70) {
+//         return 'D'
+//     } else if (average >= 0 && average <= 60) {
+//         return 'F'
+//     } 
         
-    return average;
+//     return average;
+// }
+
+
+// console.log(score(50, 50, 50));
+
+// const score = [50,50,50];
+
+// const sum = score.reduce((acc, num) => acc + num, 0);
+
+// const average = sum / 3;
+
+// console.log(average);
+
+// dodaj zeby dzielil wyniki przez liczbe bodanych wynikow oraz 
+// dodac czy liczby sa w zakresie 0 do 100
+
+
+function getGrade(s1, s2, s3) {
+    const average = (s1 + s2 + s3) / 3;
+        if (average >= 90 && average <= 100) {
+            return 'A';
+        }  else if (average >= 80 && average < 90) {
+            return 'B';
+        } else if (average >= 70 && average < 80) {
+            return 'C';
+        } else if (average >= 60 && average < 70) {
+            return 'D';
+        } else if (average >= 0 && average < 60) {
+            return 'F';
+        }
 }
 
+console.log(getGrade(80, 90, 90));
+console.log(average);
 
-console.log(score(50, 50, 50));
+// Tested values are all between 0 and 100. Theres is no need to check 
+// for negative values or values greater than 100.
