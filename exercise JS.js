@@ -648,3 +648,50 @@ console.log(squareSum1([1,2,2]));
 const squareSum2 = num => num.reduce((a, b) => a + b ** 2, 0);
 
 console.log(squareSum2([1,2,2]));
+
+
+
+// An isogram is a word that has no repeating letters, consecutive 
+// or non-consecutive. Implement a function that determines whether a 
+// string that contains only letters is an isogram. Assume the empty 
+// string is an isogram. Ignore letter case.
+
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str){
+    for (let i = 0; i < str.length; i++) {
+        if (str.indexOf(str[i], i +1) !== -1) {
+            return false;
+        }
+    }
+    return true;
+    
+}
+
+console.log(isIsogram("mose"));
+
+//  trzeba dodac zeby kazda litera byla mala 
+
+function isIsogram(str) {
+    for (let i = 0; i < str.length; i++) {
+        const lowercaseChar = str[i].toLowerCase();  // Konwertuj do małych liter przed porównaniem
+        if (str.toLowerCase().indexOf(lowercaseChar, i + 1) !== -1) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isIsogram("mose"));
+
+// other example 
+
+// const fruits = ["apple", "banana", "orange"];
+// const element = "banana";
+// const index = fruits.indexOf(element);
+// const exists = index !== -1;
+// console.log(exists); // Output: true
+
