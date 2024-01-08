@@ -616,6 +616,10 @@ function score(s1, s2, s3) {
 
 }
 
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 
+
 function isValid(num) {
     return num >= 0 && num <= 100;
 }
@@ -623,3 +627,24 @@ function isValid(num) {
 console.log(score(80,80,100));
 
 
+function squareSum(numbers) {
+    return numbers.map(num => Math.pow(num, 2)) // wpisac num ** 2, taki sam efekt
+                  .reduce((acc, num) => acc + num, 0)
+}
+
+console.log(squareSum([1,2,2]));
+
+// or
+
+function squareSum1(numbers) {
+    return numbers.reduce((acc, num) => acc + Math.pow(num, 2), 0);
+}
+
+console.log(squareSum1([1,2,2]));
+
+
+// or 
+
+const squareSum2 = num => num.reduce((a, b) => a + b ** 2, 0);
+
+console.log(squareSum2([1,2,2]));
