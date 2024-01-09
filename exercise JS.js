@@ -695,3 +695,17 @@ console.log(isIsogram("mose"));
 // const exists = index !== -1;
 // console.log(exists); // Output: true
 
+
+function checkRepeat(word) {
+    for (let i = 0; i < word.length; i++) {
+        const indexOfResult = word.toLowerCase().indexOf(word[i], i + 1 );
+        console.log(`Znak: ${word[i]}, index: ${indexOfResult}`)
+
+        if (indexOfResult !== -1) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(checkRepeat("marcin"))
