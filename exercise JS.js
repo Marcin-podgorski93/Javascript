@@ -738,3 +738,25 @@ function friend1(friends){
 
 
 console.log(friend1(["Ryan","Kieran","Mark"]));
+
+
+// DESCRIPTION:
+// Build a function that returns an array of integers from n to 1 where n>0.
+
+// Example : n=5 --> [5,4,3,2,1]
+
+for (let i = 5; i > 0; i --) {
+  console.log(i);
+}
+
+// uzywamy petle for ale zeby uzyskac wynik musimy stworzyc nowa tablice na ktora potem za pomoca push wrzucimy wyniki.
+
+const reverseSeq = n => {
+    const result = [];
+    for (let i = n; i > 0; i --) {;
+        result.push(i);
+    }
+    return result;
+}
+
+console.log(reverseSeq(5))
