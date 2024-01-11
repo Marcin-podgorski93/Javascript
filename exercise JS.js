@@ -616,15 +616,17 @@ function score(s1, s2, s3) {
 
 }
 
-// Complete the square sum function so that it squares each number passed into it and then sums the results together.
-
-// For example, for [1, 2, 2] it should return 9 because 
-
 function isValid(num) {
     return num >= 0 && num <= 100;
 }
 
 console.log(score(80,80,100));
+
+
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 
 
 
 function squareSum(numbers) {
@@ -759,4 +761,49 @@ const reverseSeq = n => {
     return result;
 }
 
-console.log(reverseSeq(5))
+console.log(reverseSeq(5));
+
+function mathCal(a, b) {
+    if (a == b) {
+        return a * b;
+    } else {
+        return (a + b) * 2;
+    }
+}
+
+
+console.log(mathCal(3, 2));
+
+
+// You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// Example(Input1, Input2 --> Output):
+
+// 6, 10 --> 32
+// 3, 3 --> 9
+// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle
+
+function areaOrPerimeter(l, w) {
+    if (l == w) {
+        return l * w;
+    } else {
+        return (l + w) * 2;
+    }
+}
+
+
+console.log(areaOrPerimeter(3, 2));
+
+// or
+
+function areaOrPerimeter1(l, w) {
+    return l == w ? l * w : (l + w) *2;
+}
+
+console.log(areaOrPerimeter1(5,4))
+
+
+// const areaOrPerimeter = function(l , w) {
+//     return l == w ? l*w : 2*(l + w)
+//   };
