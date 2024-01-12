@@ -807,3 +807,14 @@ console.log(areaOrPerimeter1(5,4))
 // const areaOrPerimeter = function(l , w) {
 //     return l == w ? l*w : 2*(l + w)
 //   };
+
+// mamy dany tekst ktory ma male litery na poczatku slowa i trzeba to zmnienic zeby kazda 
+// pierwsza litera byla z wielkiej litery.
+
+
+function prototypeToJaden(sentence) {
+   return sentence.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
+console.log(prototypeToJaden("How can mirrors be"));
+
