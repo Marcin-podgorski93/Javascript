@@ -818,3 +818,13 @@ function prototypeToJaden(sentence) {
 
 console.log(prototypeToJaden("How can mirrors be"));
 
+
+const prototypeToJaden2 = sentence => 
+    sentence.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+
+console.log(prototypeToJaden2("marcin podgorski hetmanska"));
+
+
