@@ -827,4 +827,53 @@ const prototypeToJaden2 = sentence =>
 
 console.log(prototypeToJaden2("marcin podgorski hetmanska"));
 
+// przyklad z codewars
 
+String.prototype.toJadenCase = function () {
+    // mozna wpisac word[0] takie sam rezultat co word.charAt(0)
+    return this.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  };
+  
+  const exampleSentence = "How can mirrors be real if our eyes aren't real";
+  console.log(exampleSentence.toJadenCase());
+  
+  
+
+
+const basket = ['apples', 'oranges', 'grapes'];
+
+for ( let i = 0; i < basket.length; i++) {
+	console.log(basket[i]);
+}
+
+
+const basket1 = ['apples', 'oranges', 'grapes'];
+
+basket1.forEach(item => console.log(item));
+
+
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i];
+}
+
+console.log(sum);
+
+
+function wordsToupper(sentence) {
+    return sentence.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
+}
+
+console.log(wordsToupper("how are you doing"))
+
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+
+function doubleChar(str) {
+    return str.split('').map(word => word.repeat(2)).join(''); // or word + word;
+}
+
+console.log(doubleChar("String"));
+console.log(doubleChar("Hello World"));
