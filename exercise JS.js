@@ -877,3 +877,21 @@ function doubleChar(str) {
 
 console.log(doubleChar("String"));
 console.log(doubleChar("Hello World"));
+
+
+function grow(x) {
+    return x.reduce((acc, currentNumber) => acc * currentNumber, 1);
+}
+
+console.log(grow([1, 2, 3, 4]));
+
+
+function grow1(x) {
+    let result = 1;
+    for (let i = 0; i < x.length; i++) {
+            result = result * x[i];
+    }
+    return result;
+}
+
+console.log(grow1([1, 2, 3, 4]));
