@@ -878,6 +878,9 @@ function doubleChar(str) {
 console.log(doubleChar("String"));
 console.log(doubleChar("Hello World"));
 
+// Given a non-empty array of integers, return the result of 
+// multiplying the values together in order. Example:
+
 
 function grow(x) {
     return x.reduce((acc, currentNumber) => acc * currentNumber, 1);
@@ -889,9 +892,28 @@ console.log(grow([1, 2, 3, 4]));
 function grow1(x) {
     let result = 1;
     for (let i = 0; i < x.length; i++) {
-            result = result * x[i];
+            result = result * x[i]; // or reslt += x[i] short version
     }
     return result;
 }
 
 console.log(grow1([1, 2, 3, 4]));
+
+
+// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the
+//  cuboid. Write a function to help Bob with this calculation.
+// a = l ; b = w; c = h
+
+function getVolumeOfCuboid1(l, w, h) {
+    return l * w * h;
+}
+
+console.log(getVolumeOfCuboid1(6, 2, 5));
+
+class Kata {
+    static getVolumeOfCuboid(l, w, h) {
+      return l * w * h;
+    }
+  }
+
+console.log(Kata.getVolumeOfCuboid(2, 3, 4));
