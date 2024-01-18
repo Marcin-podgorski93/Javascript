@@ -900,8 +900,7 @@ function grow1(x) {
 console.log(grow1([1, 2, 3, 4]));
 
 
-// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the
-//  cuboid. Write a function to help Bob with this calculation.
+// Bob needs a fast way to calculate the volume of a cuboid with three values: thelength, width and height of the cuboid. Write a function to help Bob with this calculation.
 // a = l ; b = w; c = h
 
 function getVolumeOfCuboid1(l, w, h) {
