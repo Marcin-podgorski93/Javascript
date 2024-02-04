@@ -916,3 +916,16 @@ class Kata {
   }
 
 console.log(Kata.getVolumeOfCuboid(2, 3, 4));
+
+
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+function otherAngle(a, b) {
+    return 180 - a - b;
+  }
+
+console.log(otherAngle(60, 60))
