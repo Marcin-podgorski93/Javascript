@@ -950,5 +950,32 @@ function boolToWord2(bool) {
     }
 }
 
-
 console.log(boolToWord2(true))
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+function checkPin(number) {
+    if (isNaN(number) || number < 0) {
+        return false;
+    }
+
+    const pinLength = number.toString().replace(/\D./g, '');
+    return pinLength.length === 4 || pinLength.length === 6;
+}
+
+console.log(checkPin(1.234))
+
+//or 
+
+// const number = 1234;
+// const lengthOfNumber = number.toString().length;
+
+// // Sprawdzenie warunku, czy długość liczby wynosi 4 lub 6
+// const isCorrectLength = lengthOfNumber === 4 || lengthOfNumber === 6;
+
+// // Zwrócenie odpowiedniej wartości na podstawie warunku
+// const result = isCorrectLength ? "Correct pin" : "Too short pin";
+
+// console.log(result); // Wyświetli "Correct pin" lub "Too short pin" w zależności od długości liczby
