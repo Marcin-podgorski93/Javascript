@@ -929,3 +929,26 @@ function otherAngle(a, b) {
   }
 
 console.log(otherAngle(60, 60))
+
+
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+function boolToWord( bool ){
+    return bool ? "Yes" : "No";
+  }
+
+console.log(boolToWord(false))
+
+
+// or 
+
+function boolToWord2(bool) {
+    if (bool) { //sam sprawdza czy bool jest prawdziwy nie trzeba porownywania z true.
+        return "Yes" ;
+    } else {
+        return "No" ;
+    }
+}
+
+
+console.log(boolToWord2(true))
