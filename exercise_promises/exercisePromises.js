@@ -18,13 +18,23 @@ const promise1 = new Promise((resolve, reject) => {
 
 // #2) Run the above promise and make it console.log "success"
 
+promise.then(console.log);
+//or
+promise.then(resp => console.log(resp));
 
 // #3) Read about Promise.resolve() and Promise.reject(). How can you make
 // the above promise shorter with Promise.resolve() and console loggin "success"
 
+const resolvedPromise = Promise.resolve('success');
+
+resolvedPromise.then(value => console.log(value));
+//or
+resolvedPromise.then(console.log);
+
 
 // #4) Catch this error and console log 'Ooops something went wrong'
 // Promise.reject('failed')
+
 
 // #5) Use Promise.all to fetch all of these people from Star Wars (SWAPI) at the same time.
 // Console.log the output and make sure it has a catch block as well.
