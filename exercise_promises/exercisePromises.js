@@ -31,9 +31,21 @@ resolvedPromise.then(value => console.log(value));
 //or
 resolvedPromise.then(console.log);
 
+//or
+
+const promise1 = Promise.resolve(
+  setTimeout(() => {
+    console.log("success");
+  }, 4000)
+);
+
+
 
 // #4) Catch this error and console log 'Ooops something went wrong'
 // Promise.reject('failed')
+
+const rejectPromise = Promise.reject('failed')
+  .catch(error => console.log("Ooops something went wrong", error));
 
 
 // #5) Use Promise.all to fetch all of these people from Star Wars (SWAPI) at the same time.
