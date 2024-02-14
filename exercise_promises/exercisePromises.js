@@ -33,7 +33,7 @@ resolvedPromise.then(console.log);
 
 //or
 
-const promise1 = Promise.resolve(
+const promise3 = Promise.resolve(
   setTimeout(() => {
     console.log("success");
   }, 4000)
@@ -69,3 +69,10 @@ Promise.all(urls.map(url => {
 
 // #6) Change one of your urls above to make it incorrect and fail the promise
 // does your catch block handle it?
+
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(resp => resp.json())
+    .then(console.log)
+
+
+    
