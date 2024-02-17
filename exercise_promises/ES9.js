@@ -21,4 +21,33 @@ function sum(a,b,c,d,e) {
 
 sum(...array); //wynik 15
 
+// funkcja await
 
+const getData = async function() {
+    try {
+    const [ users, posts, albums ] = await Promise.all(urls.map(url => 
+        fetch(url).then(resp => resp.json())
+        ))
+        console.log('users', users)
+        console.log('posts', posts)
+        console.log('albums', albums)
+    } catch (error){
+        console.log('oops', error)
+    }
+}
+
+
+
+//funkcja for await of
+
+async function fetchUsers() {
+    const urls = ['https://jsonplaceholder.typicode.com/users'];
+    
+    for await (const url of urls) {
+        const response = await fetch(url);
+        const userData = await response.json();
+        console.log(userData);
+    }
+}
+
+fetchUsers();

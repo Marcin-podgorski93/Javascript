@@ -49,6 +49,18 @@ const getData = async function() {
     }
 }
 
+//uzycie for await of
+
+async function fetchUsers() {
+    const urls = ['https://api.example.com/user/1', 'https://api.example.com/user/2'];
+
+    for await (const url of urls) {
+        const response = await fetch(url);
+        const userData = await response.json();
+        console.log(userData);
+    }
+}
+
 
 const urls = [
     'https://swapi.dev/api/people/1',
@@ -67,3 +79,4 @@ const urls = [
       console.log('4', array[3])
     })
     .catch(err => console.log('ughhhh fix it!', err));
+
