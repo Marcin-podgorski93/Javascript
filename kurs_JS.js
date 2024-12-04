@@ -46,3 +46,18 @@ function count1(string) {
 }
 
 console.log(count1(tekst));
+
+// Count the number of Duplicates
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+function checkText(str) {
+  str = str.toLowerCase();
+  let charCount = {};
+  for (const char of str) {
+    console.log(char);
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+  return charCount;
+}
+
+console.log(checkText("abcde"));
