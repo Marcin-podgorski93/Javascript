@@ -82,3 +82,38 @@ function checkText1(str) {
 }
 
 console.log(checkText1("aaccde"));
+
+function disevowel2(str) {
+  const vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+
+  return str
+    .split("") //rozbijamy na tablice znakow
+    .filter((char) => !vowel.includes(char)) //filtrujemy
+    .join(""); //laczymy tablice z powrotem w ciag
+}
+
+console.log(disevowel2("This website is for losers LOL!"));
+
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// Example
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+function checkNum(num) {
+  let result = [];
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] >= 0) {
+      result.push(num[i]);
+    }
+  }
+  return result;
+}
+
+console.log(checkNum([1, 2, "a", "b"]));
+
+function checkIsNum(num) {
+  return num.filter((item) => typeof item === "number");
+}
+
+console.log(checkIsNum([1, 2, "a", "b"]));
