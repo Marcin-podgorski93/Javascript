@@ -117,3 +117,16 @@ function checkIsNum(num) {
 }
 
 console.log(checkIsNum([1, 2, "a", "b"]));
+
+// //Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  const vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  return str
+    .split("") //rozbijamy na tablice znakow
+    .filter((char) => vowel.includes(char)).length; //sprawdzamy czy char jest samogloska // zwracamy dlugosc tablicy
+}
+
+console.log(getCount("apple"));
