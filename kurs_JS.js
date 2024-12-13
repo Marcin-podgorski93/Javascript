@@ -139,14 +139,20 @@ console.log(getCount("apple"));
 // "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
 
 function duplicateCount(text) {
-  const result = {};
-  for (const znak of text) {
-    if (result[znak]) {
-      result[znak]++;
-      console.log(result[znak]);
+  text = text.toLowerCase();
+  for (const element of text) {
+    console.log(element);
+    if (element === element) {
     }
   }
+
   return text;
 }
 
-console.log(duplicateCount("aabbcde"));
+console.log(duplicateCount("aaBbcde"));
+
+function checkEven(num) {
+  return num % 2 === 0;
+}
+
+console.log(checkEven(6));
