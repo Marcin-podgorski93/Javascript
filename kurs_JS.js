@@ -195,3 +195,24 @@ function greet(name) {
 }
 
 console.log(greet("Marcin"));
+
+function checkText2(str) {
+  str = str.toLowerCase();
+  let charCount = {};
+  for (const char of str) {
+    console.log(char);
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  let duplicates = 0;
+  for (const key in charCount) {
+    if (charCount[key] > 1) {
+      duplicates++;
+      console.log(duplicates);
+    }
+  }
+
+  return duplicates;
+}
+
+console.log(checkText2("aaccde"));
